@@ -20,8 +20,10 @@ define([
 
         home: function() {
         	require(['collections/quiz', 'views/quiz', 'json!data/eng.json'],
-        	function(QuizCollection, QuizView, EngData) {
-        		var quiz = new QuizCollection();
+        	function(QuizCollection, QuizView, data) {
+        		var quiz = new QuizCollection(data.questions, {
+        			title: data.name
+        		});
 	            var quizView = new QuizView({
 	            	collection: quiz
 	            });

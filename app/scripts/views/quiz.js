@@ -5,8 +5,9 @@ define([
     'underscore',
     'backbone',
     'views/welcome',
-    'views/question'
-], function ($, _, Backbone, WelcomeView, QuestionView) {
+    'views/question',
+    'models/question'
+], function ($, _, Backbone, WelcomeView, QuestionView, QuestionModel) {
     'use strict';
 
     var QuizView = Backbone.View.extend({
@@ -14,32 +15,24 @@ define([
         events: {},
 
         initialize: function () {
+            this.currentView = null;
         },
 
         render: function () {
-            console.log('rendering welcome view');
-            this.welcomeView = new WelcomeView();
-            this.welcomeView.render();
-            this.listenTo(this.welcomeView, 'start', this.start);
-            this.$el.html(this.welcomeView.$el);
-        },
-
-        start: function() {
-            console.log('removing welcome view, rendering question view');
-            this.welcomeView.remove();
-            this.questionView = new QuestionView();
-            this.questionView.render();
-            this.listenTo(this.questionView, 'next', this.next);
-            this.$el.html(this.questionView.$el);
+            this.currentView = new WelcomeView();
+            this.currentView.render();
+            this.listenTo(this.currentView, 'start', this.next);
+            this.$el.html(this.currentView.$el);
         },
 
         next: function() {
-            console.log('removing old question view, rendering new question view');
-            this.welcomeView.remove();
-            this.questionView = new QuestionView();
-            this.questionView.render();
-            this.listenTo(this.questionView, 'next', this.next);
-            this.$el.html(this.questionView.$el);
+            this.currentView.remove();
+            this.currentView = new QuestionView({
+                model: this.collection.getRandom()
+            });
+            this.currentView.render();
+            this.listenTo(this.currentView, 'next', this.next);
+            this.$el.html(this.currentView.$el);
         }
     });
 

@@ -8,7 +8,10 @@ define([
     'use strict';
 
     var QuizCollection = Backbone.Collection.extend({
-        model: QuestionModel
+        model: QuestionModel,
+        getRandom: function() {
+        	return this.models[_.random(this.models.length-1)];
+        }
     });
 
     return QuizCollection;
