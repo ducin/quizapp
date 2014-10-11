@@ -1,5 +1,7 @@
 function deploy {
+
     grunt build
+    git add .
     git commit
     HASH=`git rev-parse HEAD`
     HASH_SHORT=${HASH:0:8}
