@@ -17,10 +17,15 @@ define([
             'click .action-show': function() { this.show(); }
         },
 
+        initialize: function (options) {
+            this.count = options.count
+        },
+
         render: function () {
             this.$el.html(this.template({
                 question: this.model.get('pol'),
-                answer: this.model.get('eng')
+                answer: this.model.get('eng'),
+                count: this.count
             }));
         },
 
