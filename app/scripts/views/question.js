@@ -13,6 +13,7 @@ define([
 
         events: {
             'click .action-next': function() { this.trigger('next') },
+            'click .action-quit': function() { this.trigger('quit') },
             'click .action-show': function() { this.show() }
         },
 

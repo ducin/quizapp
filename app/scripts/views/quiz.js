@@ -32,7 +32,12 @@ define([
             });
             this.currentView.render();
             this.listenTo(this.currentView, 'next', this.next);
+            this.listenTo(this.currentView, 'quit', this.quit);
             this.$el.html(this.currentView.$el);
+        },
+
+        quit: function() {
+            this.currentView.remove();
         }
     });
 

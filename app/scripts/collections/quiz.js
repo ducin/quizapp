@@ -9,8 +9,13 @@ define([
 
     var QuizCollection = Backbone.Collection.extend({
         model: QuestionModel,
+        lastIndex: -1,
         getRandom: function() {
-        	return this.models[_.random(this.models.length-1)];
+        	var idx = this.lastIndex;
+        	while (idx === this.lastIndex) {
+        		idx = _.random(this.models.length - 1);
+        	}
+        	return this.lastIndex = this.models[idx];
         }
     });
 
