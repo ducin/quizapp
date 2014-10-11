@@ -13,9 +13,11 @@ define([
         getRandom: function() {
         	var idx = this.lastIndex;
         	while (idx === this.lastIndex) {
+        		console.log(idx, this.lastIndex)
         		idx = _.random(this.models.length - 1);
         	}
-        	return this.lastIndex = this.models[idx];
+        	this.lastIndex = idx;
+        	return this.models[idx];
         }
     });
 
