@@ -1,4 +1,5 @@
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+[![Build Status](https://travis-ci.org/tkoomzaaskz/quizapp.png?branch=master)](https://travis-ci.org/tkoomzaaskz/quizapp)
 
 Quiz Application
 ================
