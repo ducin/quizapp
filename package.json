@@ -1,6 +1,31 @@
 {
-  "name": "quizappnew",
-  "version": "0.0.0",
+  "name": "QuizApp",
+  "version": "0.1.0",
+  "description": "Basic Quiz single-page application",
+  "main": "app/index.html",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "grunt jshint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tkoomzaaskz/quizapp"
+  },
+  "keywords": [
+    "yeoman",
+    "grunt",
+    "bower",
+    "backbone",
+    "quiz"
+  ],
+  "author": "Tomasz Ducin <tomasz.ducin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tkoomzaaskz/quizapp/issues"
+  },
+  "homepage": "https://github.com/tkoomzaaskz/quizapp",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
