@@ -12,9 +12,9 @@ define([
         template: JST['app/scripts/templates/question.ejs'],
 
         events: {
-            'click .action-next': function() { this.trigger('next') },
-            'click .action-quit': function() { this.trigger('quit') },
-            'click .action-show': function() { this.show() }
+            'click .action-next': function() { this.trigger('next'); },
+            'click .action-quit': function() { this.trigger('quit'); },
+            'click .action-show': function() { this.show(); }
         },
 
         render: function () {

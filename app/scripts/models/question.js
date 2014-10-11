@@ -7,6 +7,7 @@ define([
     'use strict';
 
     var QuestionModel = Backbone.Model.extend({
+/*
         url: '',
 
         initialize: function() {
@@ -21,6 +22,7 @@ define([
         parse: function(response, options)  {
             return response;
         }
+*/
     });
 
     return QuestionModel;

@@ -5,9 +5,8 @@ define([
     'underscore',
     'backbone',
     'views/welcome',
-    'views/question',
-    'models/question'
-], function ($, _, Backbone, WelcomeView, QuestionView, QuestionModel) {
+    'views/question'
+], function ($, _, Backbone, WelcomeView, QuestionView) {
     'use strict';
 
     var QuizView = Backbone.View.extend({

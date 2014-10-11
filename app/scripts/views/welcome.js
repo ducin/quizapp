@@ -18,7 +18,7 @@ define([
         className: '',
 
         events: {
-            'click .action-start': function() { this.trigger('start') }
+            'click .action-start': function() { this.trigger('start'); }
         },
 
         initialize: function () {

@@ -11,13 +11,12 @@ define([
         model: QuestionModel,
         lastIndex: -1,
         getRandom: function() {
-        	var idx = this.lastIndex;
-        	while (idx === this.lastIndex) {
-        		console.log(idx, this.lastIndex)
-        		idx = _.random(this.models.length - 1);
-        	}
-        	this.lastIndex = idx;
-        	return this.models[idx];
+            var idx = this.lastIndex;
+            while (idx === this.lastIndex) {
+                idx = _.random(this.models.length - 1);
+            }
+            this.lastIndex = idx;
+            return this.models[idx];
         }
     });
 

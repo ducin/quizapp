@@ -30,7 +30,7 @@ require([
 ], function (Backbone, Bootstrap, Router, RootView) {
     var rootView = new RootView();
     rootView.render();
-    var router = new Router({
+    new Router({
         modalContainer: $('body')
     });
     Backbone.history.start();
