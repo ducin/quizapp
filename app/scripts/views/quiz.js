@@ -27,7 +27,7 @@ define([
         },
 
         next: function() {
-            this.currentView.remove();
+            this.currentView.destroy();
             this.currentView = new QuestionView({
                 model: this.collection.getRandom(),
                 count: this.count
@@ -40,7 +40,7 @@ define([
         },
 
         quit: function() {
-            this.currentView.remove();
+            this.currentView.destroy();
         }
     });
 

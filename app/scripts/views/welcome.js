@@ -26,6 +26,13 @@ define([
 
         render: function () {
             this.$el.html(this.template());
+        },
+
+        destroy: function() {
+            this.undelegateEvents();
+            this.$el.removeData().unbind();
+            this.remove();
+            Backbone.View.prototype.remove.call(this);
         }
     });
 
