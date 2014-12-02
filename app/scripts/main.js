@@ -18,15 +18,15 @@ require.config({
         bootstrap: '../bower_components/sass-bootstrap/dist/js/bootstrap',
         text: '../bower_components/requirejs-text/text',
         json: '../bower_components/requirejs-plugins/src/json'
-    }
+    },
+    findNestedDependencies: true
 });
 
 require([
     'backbone',
     'bootstrap',
     'routes/router',
-    'views/root',
-    'views/about', 'views/attributions', 'views/quiz', 'collections/quiz', 'json!data/eng.json'
+    'views/root'
 ], function (Backbone, Bootstrap, Router, RootView) {
     var rootView = new RootView();
     rootView.render();
