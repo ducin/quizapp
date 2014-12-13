@@ -49,9 +49,14 @@ define([
             // https://twitter.com/integralist/status/351006156883361793
             // dynamically built module name will result in require error
             switch (modalName) {
-                case 'about': require(['views/about'], handler); break;
-                case 'attributions': require(['views/attributions'], handler); break;
-                default: throw new Error('unknown modal view trying to be loaded: ' + modalName);
+                case 'about':
+                    require(['views/about'], handler);
+                    break;
+                case 'attributions':
+                    require(['views/attributions'], handler);
+                    break;
+                default:
+                    throw new Error('unknown modal view trying to be loaded: ' + modalName);
             }
         },
 
