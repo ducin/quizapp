@@ -33,7 +33,7 @@ define([
 
         handleModal: function(modalName) {
             var self = this;
-            require(['views/' + modalName], function(ModalView) {
+            var handler = function(ModalView) {
                 // create, render and attach modal to the DOM
                 var modalView = new ModalView();
                 self.modalContainer.append(modalView.render().$el);
@@ -43,7 +43,16 @@ define([
                 modalView.$el.on('hidden.bs.modal', function () {
                     modalView.remove();
                 });
-            });
+            };
+            // this can't be done dynamically, since r.js analyses code
+            // statically in search of modules to be loaded in future:
+            // https://twitter.com/integralist/status/351006156883361793
+            // dynamically built module name will result in require error
+            switch (modalName) {
+                case 'about': require(['views/about'], handler); break;
+                case 'attributions': require(['views/attributions'], handler); break;
+                default: throw new Error('unknown modal view trying to be loaded: ' + modalName);
+            }
         },
 
         about: function() {

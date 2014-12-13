@@ -8,7 +8,7 @@ function deploy {
     git rm -r index.html scripts styles
     cp -r dist/* .
     git add .
-    git commit -m "bumb $HASH_SHORT"
+    git commit -m "bump $HASH_SHORT"
     git push
     git checkout master
     echo 'deploy finished'
