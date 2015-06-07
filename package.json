@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tkoomzaaskz/quizapp"
+    "url": "https://github.com/ducin/quizapp"
   },
   "keywords": [
     "yeoman",
@@ -23,9 +23,9 @@
   "author": "Tomasz Ducin <tomasz.ducin@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tkoomzaaskz/quizapp/issues"
+    "url": "https://github.com/ducin/quizapp/issues"
   },
-  "homepage": "https://github.com/tkoomzaaskz/quizapp",
+  "homepage": "https://github.com/ducin/quizapp",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
