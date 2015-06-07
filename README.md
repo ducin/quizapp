@@ -1,11 +1,11 @@
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
-[![Build Status](https://travis-ci.org/tkoomzaaskz/quizapp.png?branch=master)](https://travis-ci.org/tkoomzaaskz/quizapp)
+[![Build Status](https://travis-ci.org/ducin/quizapp.png?branch=master)](https://travis-ci.org/ducin/quizapp)
 
 Quiz Application
 ================
 
 Define a json file with questions and answers and display them one at a time.
-This project is in early basic stage, but is easily extendable. See [live demo](http://tkoomzaaskz.github.io/quizapp).
+This project is in early basic stage, but is easily extendable. See [live demo](http://ducin.github.io/quizapp).
 
 Software used
 =============
